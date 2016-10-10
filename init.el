@@ -85,10 +85,6 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-;; undo-tree - improve undo-behaviour with (C-/: undo, C-_: redo, C-x u: undo-tree)
-(require 'undo-tree)
-(global-undo-tree-mode)
-
 ;; volatile-highlights - yanked regions are highlighted
 (require 'volatile-highlights)
 (volatile-highlights-mode t)
@@ -128,6 +124,7 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/.saves")))
 
 ;;company - complete anything (text-completion framework)
+(require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;;flyspell - autocorrect
@@ -174,7 +171,7 @@
 ;; flycheck - syntax checking
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(require 'flycheck-tip)
+;(require 'flycheck-tip)
 
 ;; yasnippet - provide snippets (TAB: expand statement) for C, C++, Python and many more
 ;; find documentation here: https://github.com/AndreaCrotti/yasnippet-snippets/tree/master
