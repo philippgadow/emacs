@@ -67,7 +67,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'monokai t)
 ;; set font
-(setq default-frame-alist '((font . "Inconsolata-11")))
+(setq default-frame-alist '((font . "Inconsolata-12")))
 (set-face-attribute 'italic nil
                     :family "Inconsolata-Italic")
 
@@ -114,7 +114,7 @@
                                    "gdb-memory-mode"
                                    "IELM"
                                    "eshell-mode" "dired-mode"))
-(golden-ratio-mode)
+;(golden-ratio-mode)
 
 
 
